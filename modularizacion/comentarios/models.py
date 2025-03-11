@@ -7,6 +7,9 @@ class Comentario(models.Model):
     email = models.EmailField()
     contenido = models.TextField()
     fecha = models.DateTimeField(auto_now_add=True)
+    aprobado = models.BooleanField(default=False)
+    
+    
 
     def __str__(self):
         return self.nombre
